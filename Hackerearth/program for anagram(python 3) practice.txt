@@ -1,0 +1,19 @@
+t = int(input())
+ 
+for i in range(t):
+ 
+    a = input()
+ 
+    b = input()
+ 
+    c = 0
+ 
+    for i in range(97,123):
+ 
+        first = a.count(chr(i))
+ 
+        second = b.count(chr(i))
+ 
+        c = c+abs(first-second)
+ 
+    print(c)

@@ -1,0 +1,33 @@
+#include <iostream> 
+#include <string> 
+using namespace std;
+
+ int count(string s, char c) 
+{ 
+    int res = 0; 
+  
+    for (int i=0;i<s.length();i++) 
+  
+        if (s[i] == c) 
+            res++; 
+  
+    return res; 
+} 
+int main() 
+{ char a='z',b='o';
+  int x=0,y=0;
+    string str; 
+    getline(cin, str); 
+	x=count(str,a);
+	y=count(str,b);
+	if (2*x==y)
+	{
+		cout<<"Yes";
+
+	}
+	else
+	cout<< "No";
+
+  
+    return 0; 
+} 

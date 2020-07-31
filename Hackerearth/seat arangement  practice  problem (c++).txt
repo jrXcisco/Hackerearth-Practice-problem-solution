@@ -1,0 +1,171 @@
+#include<iostream>
+
+using namespace std;
+
+
+ 
+
+int main(){
+
+    int n;
+
+    cin>>n;
+
+    while(n>0){
+
+        int seat_num,s;
+
+        cin>>seat_num;
+
+        s = seat_num % 12;
+
+        if(s == 0){
+
+          cout<<seat_num - 11 << " "<<"WS"<<endl; 
+
+        }
+
+        else if(s==1){
+
+          cout<<seat_num + 11 << " "<<"WS"<<endl; 
+
+        }
+
+        else if(s==2){
+
+          cout<<seat_num + 9 << " "<<"MS"<<endl; 
+
+        }
+
+        else if(s==3){
+
+          cout<<seat_num + 7<< " "<<"AS"<<endl; 
+
+        }
+
+        else if(s==4){
+
+          cout<<seat_num + 5 << " "<<"AS"<<endl; 
+
+        }
+
+        else if(s==5){
+
+          cout<<seat_num + 3 << " "<<"MS"<<endl; 
+
+        }
+
+        else if(s==6){
+
+          cout<<seat_num + 1 << " "<<"WS"<<endl; 
+
+        }
+
+        else if(s==7){
+
+          cout<<seat_num - 1 << " "<<"WS"<<endl; 
+
+        }
+
+        else if(s==8){
+
+          cout<<seat_num - 3  << " "<<"MS"<<endl; 
+
+        }
+
+        else if(s==9){
+
+          cout<<seat_num - 5<< " "<<"AS"<<endl; 
+
+        }
+
+        else if(s==10){
+
+          cout<<seat_num - 7 << " "<<"AS"<<endl; 
+
+        }
+
+        else if(s==11){
+
+          cout<<seat_num - 9 << " "<<"MS"<<endl; 
+
+        }
+
+        n--;
+
+    }
+
+
+ 
+
+    return 0;
+
+}
+
+
+
+
+Python 3 solution:
+T = int(input())
+
+
+ 
+
+while T!=0:
+
+    seat_number = int(input())
+
+    s=seat_number%12
+
+    if s==0:
+
+        print(seat_number-11,'WS')
+
+    elif s==1:
+
+        print(seat_number+11,'WS')
+
+    elif s==2:
+
+        print(seat_number+9,'MS')
+
+    elif s==3:
+
+        print(seat_number+7,'AS')
+
+    elif s==4:
+
+        print(seat_number+5,'AS')
+
+    elif s==5:
+
+        print(seat_number+3,'MS')
+
+    elif s==6:
+
+        print(seat_number+1,'WS')
+
+    elif s==7:
+
+        print(seat_number-1,'WS')
+
+    elif s==8:
+
+        print(seat_number-3,'MS')
+
+    elif s==9:
+
+        print(seat_number-5,'AS')
+
+    elif s==10:
+
+        print(seat_number-7,'AS')
+
+    elif s==11:
+
+        print(seat_number-9,'MS')
+
+ 
+
+    T=T-1
+    

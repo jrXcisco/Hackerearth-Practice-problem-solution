@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+
+ 
+
+int main()
+
+{
+
+    int N,i=0;
+
+    scanf("%d",&N);
+
+while(++i)
+
+    {
+
+        if(N <= i)
+
+        {
+
+            printf("Patlu");
+
+            break;
+
+        }
+
+        N = N - i;
+
+        if(N <= i*2)
+
+        {
+
+            printf("Motu");
+
+            break;
+
+        }
+
+        N = N - i*2;
+
+    }
+
+    return 0;
+
+}

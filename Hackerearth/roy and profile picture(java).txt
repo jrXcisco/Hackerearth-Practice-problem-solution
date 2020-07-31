@@ -1,0 +1,93 @@
+java (solution):
+
+mport java.util.Scanner;
+
+class TestClass {
+
+public static void main(String args[] ) {
+
+Scanner sc=new Scanner(System.in);
+
+int L=sc.nextInt();
+
+int n=sc.nextInt();
+
+while(n!=0){
+
+System.out.println(photo(sc.nextInt(),sc.nextInt(),L));
+
+n--;
+
+}
+
+}
+
+static String photo(int w,int h,int l){
+
+if(w<l||h<l)
+
+return "UPLOAD ANOTHER";
+
+if(w>=l&&h>=l&&w==h)
+
+return "ACCEPTED";
+
+else
+
+return "CROP IT";
+
+}
+
+}
+
+My c++ solution:(test cases passed are 6/7)
+
+#include <stdio.h>
+#include<iostream>
+ 
+int main()
+{
+  long long int l;
+  std::cin>>l;
+  int n;
+  std::cin>>n;
+  while(n--)
+  {
+  long long int w,h;
+  std::cin>>w>>h;
+  if(w==h)
+  {
+     std::cout<<"ACCEPTED"<<"\n";
+  }
+  else if (l>w || l>h)
+  {
+      std::cout<<"UPLOAD ANOTHER"<<"\n";
+  }
+  else if (w>l || h>l)
+  {
+    std::cout<<"CROP IT"<<"\n";
+  }
+  else if(l>w && l==h)
+  {
+        std::cout<<"UPLOAD ANOTHER"<<"\n";
+  }
+  else if(l==w && l>h)
+  {
+        std::cout<<"UPLOAD ANOTHER"<<"\n";
+  }
+  else if (w>l && h==l)
+  {
+    std::cout<<"CROP IT"<<"\n";
+  }
+  else if (w==l && h>l)
+  {
+    std::cout<<"CROP IT"<<"\n";
+  }
+
+  
+
+  }
+  
+   
+    
+}

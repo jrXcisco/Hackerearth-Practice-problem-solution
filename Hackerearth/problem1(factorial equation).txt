@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <iostream>
+#include <math.h>
+int lastDigit(int n) 
+{ 
+     
+    return (n % 10); 
+} 
+unsigned int factorial(unsigned int n) 
+{ 
+    if (n == 0) 
+        return 1; 
+    return n * factorial(n - 1); 
+} 
+int main()
+{ 
+int x,n,b=0;
+std::cin>>x>>n;
+if(n==0){
+   std::cout<<lastDigit(x);
+}
+if(n>5)
+{
+std::cout<<b;
+}
+else
+{
+long int a=factorial(n);
+long int result = pow(x, a);
+ std::cout << lastDigit(result);
+ return 0;
+}
+    
+}

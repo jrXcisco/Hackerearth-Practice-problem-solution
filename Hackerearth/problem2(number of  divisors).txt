@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include<iostream>
+
+int main()
+{
+    long long int n,k,sum=0;
+    std::cin>>n>>k;
+    int pattern[n];
+    for(int i=1; i<n+1;++i){
+
+        pattern[i]=i;
+    //std::cout<<pattern[i];
+    }
+    for(int j=1; j<n+1;++j)
+    {
+      if(j%k==0)
+        { int n=j;
+            while(n%k==0)
+            {
+                n=n/k;
+            }
+            pattern[j]=n;
+        }
+        
+    }
+    for(int a=1; a<n+1;++a){
+        sum=sum+pattern[a];
+        
+    }
+ std::cout<<sum;
+    
+    
+}

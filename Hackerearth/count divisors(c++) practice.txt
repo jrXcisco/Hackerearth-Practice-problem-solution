@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<iostream>
+
+int main()
+{
+    long long int l,r,k,count=0;
+    std::cin>>l>>r>>k;
+    for(l; l<r+1;l++){
+    { if (l%k==0)
+
+        count++;
+    }
+       
+    }
+   
+    
+   std::cout<<count;
+
+    
+    
+}

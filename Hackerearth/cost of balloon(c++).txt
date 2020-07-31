@@ -1,0 +1,144 @@
+c++ program:
+
+#include <stdio.h>
+#include<iostream>
+
+int main()
+{   int n;
+    std::cin>>n;
+    while(n--)
+    {
+    long long int l,r,k,gren=0,purp=0;
+    std::cin>>l>>r>>k;
+    
+    long long int ballon[1000];
+    
+    for(int i=1; i<2*k;i++){
+        std::cin>>ballon[i];
+    }
+    
+   for(int i=1; i<2*k;i++){
+        if(i%2==0){
+            if(ballon[i]==1)
+            {
+                gren++;
+            }
+        }
+        else
+            if(ballon[i]==1)
+            {
+                purp++;
+            }
+	}
+     
+       
+       
+
+   
+   if (l>=r)
+   {
+  std::cout<<gren*r+purp*l<<"\n";
+   }
+  else
+  std::cout<<gren*l+purp*r<<"\n";
+    }
+  
+  
+
+    
+    
+}
+alternate method to solve it:
+(c++ 14)
+#include <stdio.h>
+#include<iostream>
+
+int main()
+{   int n;
+    std::cin>>n;
+    while(n--)
+    {
+    long long int l,r,k,gren=0,purp=0;
+    std::cin>>l>>r>>k;
+    if(r>l)
+    {
+        int c;
+        c=r;
+        r=l;
+        l=c;
+        
+    }
+    
+    long long int ballon[1000];
+    
+    for(int i=1; i<2*k;i++){
+        std::cin>>ballon[i];
+    }
+   for(int i=1; i<2*k;i++){
+        if(i%2==0){
+            if(ballon[i]==1)
+            {
+                gren++;
+            }
+        }
+        else
+            if(ballon[i]==1)
+            {
+                purp++;
+            }
+   }
+  std::cout<<gren*r+purp*l;
+    }
+  
+  
+
+    
+    
+}
+
+another method by spilting the arrays in two parts:
+#include <iostream>
+using namespace std;
+
+int main(){
+int n;
+cin>> n;
+for(int i=0;i<n;i++){
+int k,num,p1,p2,c1[10],c2[10],r1=0,r2=0,cost=0;
+cin>>p1>>p2;
+
+if(p1<p2){
+k=p1;
+p1=p2;
+p2=k;
+}
+
+cin>>num;
+if(num==0){
+
+break;
+}
+//cout<<p1<<" "<<p2<<"\n"<<num<<"\n";
+for(int i=0;i<num;i++){
+cin>>c1[i]>>c2[i];
+}
+
+for(int j=0;j<num;j++){
+if(c1[j]==1)
+r1++;
+if(c2[j]==1)
+r2++;
+}
+if(r1>=r2){
+cost=(r1*p2)+(r2*p1);
+}
+if(r1<r2)
+cost=(r1*p1)+(r2*p2);
+
+cout<<cost<<"\n";
+}
+}
+
+
+
+

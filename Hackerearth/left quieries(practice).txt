@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+
+{
+
+int t;
+
+cin>>t;
+
+int cur_up=7;
+
+int cur_dow=0;
+
+while(t--)
+
+{
+
+ 
+
+int n;
+
+cin>>n;//3
+
+ 
+
+if(abs(n-cur_dow) <= abs(cur_up-n))
+
+{
+
+cur_dow=n;//3
+
+cout<<"A"<<endl;
+
+}
+
+else
+
+{
+
+cur_up=n;
+
+cout<<"B"<<endl;
+
+}
+
+
+ 
+
+}
+
+}
